@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    
+    /* (paragraphs) */
+    --Transparent-white-: hsla(0, 0%, 100%, 0.75);
+    
+    /* (background, headings, buttons) */
+    --Very-light-gray: hsl(0, 0%, 95%);
+
+    /* font */
+    --font-size: 15px
+    --font-weight-ld: 400;
+    --font-family-ld: 'Lexend Deca', sans-serif;
+
+    --font-weight-bsd: 700;
+    --font-family-bsd: 'Big Shoulders Display', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Very-light-gray);
+}
+
+main {
+    /* border: black 1px solid; */
+    max-width: 800px;
+    margin: 10rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+h1 {
+    font-weight: var(--font-weight-bsd);
+    font-family: var(--font-family-bsd);
+    color: var(--Very-light-gray);
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 13px;
+    font-weight: var(--font-family-ld);
+    font-family: var(--font-family-ld);
+    color: var(--Transparent-white-);
+    margin-bottom: 6rem;
+}
+
+div {
+    padding: 2rem;
+}
+
+img {
+    margin-bottom: 1rem;
+}
+
+button {
+    font-size: 13px;
+    font-weight: var(--font-family-ld);
+    font-family: var(--font-family-ld);
+    background-color: var(--Very-light-gray);
+}
+
+#sedans {
+    background-color: var(--Bright-orange);
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+#sedans button {
+    color: var(--Bright-orange);
+    border: 0;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+#sedans button:hover {
+    color: var(--Very-light-gray);
+    background-color: transparent;
+    border: 1px solid var(--Very-light-gray);
+}
+
+#suvs {
+    background-color: var(--Dark-cyan);
+}
+
+#suvs button {
+    color: var(--Dark-cyan);
+    border: 0;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+#suvs button:hover {
+    color: var(--Very-light-gray);
+    background-color: transparent;
+    border: 1px solid var(--Very-light-gray);
+}
+
+#luxury {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+#luxury button {
+    color: var(--Very-dark-cyan);
+    border: 0;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+#luxury button:hover {
+    color: var(--Very-light-gray);
+    background-color: transparent;
+    border: 1px solid var(--Very-light-gray);
+}
+
+@media screen and (max-width: 375px) {
+
+    main {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+        max-width: 280px;
+    }
+
+    main>div {
+        height: 350px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    #sedans {
+        border-radius: .5rem .5rem 0 0;
+    }
+
+    #luxury {
+        border-radius: 0 0 .5rem .5rem;
+    }
+
+}
